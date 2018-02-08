@@ -27,7 +27,11 @@
 
 using System;
 using System.Globalization;
+#if System
 using System.IdentityModel.Tokens.Jwt;
+#else
+using Microsoft.IdentityModel.Tokens.Jwt;
+#endif
 using System.Text;
 using Microsoft.IdentityModel.Tests;
 using Xunit;
